@@ -4,15 +4,16 @@
 <!-- Inline CSS overrides Internal CSS, which overrides External CSS. Thus the name "Cascading Style Sheets." -->
 <style>
 /* This is a CSS comment */
-	h1 {color: blue; font-size: 50px;}
+	h1 {color: blue; font-size: 7vw;}
 	p {
 		color: green; 
 	}
 	#test {color: blue;}
-	button {background: cornsilk; font-size: 20px;}
-	#textChange {font-size: 30px;}
-	#timer {font-size: 50px; margin-left: 100px;}
-	a {font-size: 30px}
+	button {background: cornsilk; font-size: 4vw;}
+	#textChange {font-size: 5vw;}
+	#timer {font-size: 50px; margin-left: 30vw;}
+	a {font-size: 4vw;}
+	#harmoniumPhoto {width:40vw;}
 </style>
 
 <!-- This begins the HTML section -->
@@ -25,7 +26,7 @@
 <button id = "buttonTest2" onclick = "text2()">Press for alternate text</button><br><br>
 <span id = "textChange">This is the beginning text for this div or division</span><br><br>
 <a href = "http://www.waveofthesea.com/harmonium.html">Cosmic Harmonium</a><br>
-<img src = "http://waveofthesea.com/keySignatures/B.jpg" width = "300px">
+<img id ="harmoniumPhoto" src = "http://waveofthesea.com/keySignatures/B.jpg" width = "300px">
 
 
 <!-- This begins the JavaScript section -->
@@ -51,8 +52,8 @@
 	setInterval(function() {
 		document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + second
 		second ++
-		if (second == 60) {second = 0; minute ++; console.log(minute)}
-		if (minute == 60) {minute = 0; hour ++; console.log(hour)}
+		if (second >= 60) {second = 0; minute ++; console.log(minute)}
+		if (minute >= 60) {minute = 0; hour ++; console.log(hour)}
 	}, 1000) // Count is every 1000 ms (every second)
 
 </script>
